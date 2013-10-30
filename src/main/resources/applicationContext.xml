@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+
+
+<bean id="fooBean" class="com.trevershick.github.proof.so1.FooBean">
+    <property name="prop1" value="val1"></property>
+    <property name="prop2" value="val2"></property>
+</bean>
+
+<bean id="barBean" class="com.trevershick.github.proof.so1.BarBean">
+    <property name="prop1" value="val3"></property>
+    <property name="prop2" value="val4"></property>
+</bean>
+
+<util:map id="mapOfFoos">
+	<entry key="foo" value-ref="fooBean"/>
+	<entry key="bar" value-ref="barBean"/>
+</util:map>
+
+</beans>
